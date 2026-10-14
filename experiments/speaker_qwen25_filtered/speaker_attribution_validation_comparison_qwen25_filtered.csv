@@ -1,0 +1,3 @@
+configuration,text_order_score,balanced_joint_f1,matched_token_coverage,joint_f1,speaker_accuracy_on_matched,gold_empty_pages,correctly_empty_gold_pages,false_positive_gold_empty_pages
+all_unknown_baseline,0.33306858375623993,0.152115169342516,0.33745783123542256,0.30030618200579756,0.71245786785872,1,0,1
+qwen2vl_speaker_only,0.33306858375623993,0.1429198212531798,0.33745783123542256,0.2940102871870386,0.6937931870911308,1,0,1

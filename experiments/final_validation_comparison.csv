@@ -1,0 +1,3 @@
+configuration,text_order_score,balanced_joint_f1,joint_f1,matched_token_coverage
+raw_tesseract_psm11_conf70_geometric_rtl,0.3434612353863007,0.1462160042128105,0.2962539862829535,0.3521270339710515
+threshold_0.7_weak_filter_with_same_ocr_rtl,0.33306858375623993,0.152115169342516,0.30030618200579756,0.33745783123542256

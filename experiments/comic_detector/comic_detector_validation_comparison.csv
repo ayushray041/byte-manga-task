@@ -1,0 +1,3 @@
+configuration,text_order_score,balanced_joint_f1,matched_token_coverage,joint_f1,speaker_accuracy_on_matched,gold_empty_pages,correctly_empty_gold_pages,false_positive_gold_empty_pages
+raw_tesseract_rtl_baseline,0.3434612353863007,0.1462160042128105,0.3521270339710515,0.2962539862829535,0.7087848709297263,1,0,1
+comic_detector_onnx_tesseract,0.398061725644189,0.09995863084781922,0.3819912665109325,0.22417779497869747,0.607922475469651,1,0,1

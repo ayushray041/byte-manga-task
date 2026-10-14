@@ -1,0 +1,100 @@
+{
+  "split_seed": 42,
+  "validation_fraction": 0.2,
+  "fixed_split_file": "/Users/ayush/Desktop/manga-task-byte/artifacts/experiments/fixed_validation_split.json",
+  "training_sequence_count": 64,
+  "validation_sequence_count": 16,
+  "validation_sequences": [
+    "seq_eaad741293da2ac1",
+    "seq_83ff2f28f5c13c40",
+    "seq_fa2eee6269a5dad3",
+    "seq_f9248d307dec033f",
+    "seq_de542b63e6b19bc2",
+    "seq_da71f7a842c91090",
+    "seq_098e260f231aa789",
+    "seq_06ec0acde37dffa4",
+    "seq_fa5b05d0f22bff15",
+    "seq_f9043534f1171d4e",
+    "seq_71033fec4de494fc",
+    "seq_88c1ad85c0fc1e9a",
+    "seq_aef69e98002294bc",
+    "seq_0dc2e3d874c804fc",
+    "seq_91119fd54cd62066",
+    "seq_f7ee32f1dd417802"
+  ],
+  "model": "mlx-community/Qwen2.5-VL-3B-Instruct-4bit",
+  "model_path": "/Users/ayush/.cache/huggingface/hub/models--mlx-community--Qwen2.5-VL-3B-Instruct-4bit/snapshots/46d4cf06a06ffc1a766c214174f9cbed2f45bcab",
+  "inference": {
+    "prompt": "speaker-only indexed batches of 10, with prior visual character anchors",
+    "response_parser": "indexed JSON; malformed, duplicate-fence, missing, duplicate-index, or invalid assignment abstains to UNKNOWN",
+    "images_per_sequence": 3,
+    "image_order": "manifest page order",
+    "ocr": "selected threshold-0.7 weak filter over Tesseract PSM 11/confidence 70/geometric RTL",
+    "candidate_boxes_in_prompt": true,
+    "batch_size": 10,
+    "max_tokens": "min(1024, max(384, batch_size * 64))",
+    "temperature": 0.0,
+    "repetition_penalty": 1.05,
+    "fallback": "UNKNOWN for malformed, missing, duplicate, or invalid assignment indices",
+    "ocr_text_and_order_unchanged": true,
+    "validation_labels_in_inference": false
+  },
+  "baseline_prediction_file": "/Users/ayush/Desktop/manga-task-byte/artifacts/experiments/weak_text_filter_groupcv_seed42/final_validation_predictions.jsonl",
+  "all_unknown_prediction_file": "/Users/ayush/Desktop/manga-task-byte/artifacts/experiments/validation_qwen25_filtered_all_unknown.jsonl",
+  "speaker_prediction_file": "/Users/ayush/Desktop/manga-task-byte/artifacts/experiments/validation_qwen25_filtered_speaker.jsonl",
+  "speaker_assignment_counts": {
+    "NARRATION": 21,
+    "UNKNOWN": 753,
+    "character1": 9
+  },
+  "character_label_counts_by_sequence": {
+    "seq_eaad741293da2ac1": 0,
+    "seq_83ff2f28f5c13c40": 0,
+    "seq_fa2eee6269a5dad3": 0,
+    "seq_f9248d307dec033f": 0,
+    "seq_de542b63e6b19bc2": 0,
+    "seq_da71f7a842c91090": 1,
+    "seq_098e260f231aa789": 0,
+    "seq_06ec0acde37dffa4": 0,
+    "seq_fa5b05d0f22bff15": 0,
+    "seq_f9043534f1171d4e": 0,
+    "seq_71033fec4de494fc": 0,
+    "seq_88c1ad85c0fc1e9a": 0,
+    "seq_aef69e98002294bc": 0,
+    "seq_0dc2e3d874c804fc": 0,
+    "seq_91119fd54cd62066": 0,
+    "seq_f7ee32f1dd417802": 0
+  },
+  "sequences_with_multiple_character_labels": 0,
+  "configurations": {
+    "all_unknown_baseline": {
+      "macro": {
+        "text_order_score": 0.33306858375623993,
+        "balanced_joint_f1": 0.152115169342516,
+        "speaker_accuracy_on_matched": 0.71245786785872,
+        "joint_f1": 0.30030618200579756,
+        "matched_token_coverage": 0.33745783123542256
+      },
+      "empty_pages": {
+        "gold_empty_pages": 1,
+        "correctly_empty_gold_pages": 0,
+        "false_positive_gold_empty_pages": 1
+      }
+    },
+    "qwen2vl_speaker_only": {
+      "macro": {
+        "text_order_score": 0.33306858375623993,
+        "balanced_joint_f1": 0.1429198212531798,
+        "speaker_accuracy_on_matched": 0.6937931870911308,
+        "joint_f1": 0.2940102871870386,
+        "matched_token_coverage": 0.33745783123542256
+      },
+      "empty_pages": {
+        "gold_empty_pages": 1,
+        "correctly_empty_gold_pages": 0,
+        "false_positive_gold_empty_pages": 1
+      }
+    }
+  },
+  "selection": "selected all-UNKNOWN: Qwen speaker labels are evaluated only after inference, and are rejected if held-out metrics do not improve and labels are not meaningful"
+}

@@ -1,0 +1,70 @@
+{
+  "split_seed": 42,
+  "validation_fraction": 0.2,
+  "fixed_split_file": "/Users/ayush/Desktop/manga-task-byte/artifacts/experiments/fixed_validation_split.json",
+  "training_sequence_count": 64,
+  "validation_sequence_count": 16,
+  "validation_sequences": [
+    "seq_eaad741293da2ac1",
+    "seq_83ff2f28f5c13c40",
+    "seq_fa2eee6269a5dad3",
+    "seq_f9248d307dec033f",
+    "seq_de542b63e6b19bc2",
+    "seq_da71f7a842c91090",
+    "seq_098e260f231aa789",
+    "seq_06ec0acde37dffa4",
+    "seq_fa5b05d0f22bff15",
+    "seq_f9043534f1171d4e",
+    "seq_71033fec4de494fc",
+    "seq_88c1ad85c0fc1e9a",
+    "seq_aef69e98002294bc",
+    "seq_0dc2e3d874c804fc",
+    "seq_91119fd54cd62066",
+    "seq_f7ee32f1dd417802"
+  ],
+  "baseline_prediction_file": "/Users/ayush/Desktop/manga-task-byte/artifacts/experiments/validation_psm11_conf70_raw_rtl_geometry.jsonl",
+  "detector_prediction_file": "/Users/ayush/Desktop/manga-task-byte/artifacts/experiments/validation_comic_text_detector.jsonl",
+  "model_file": "/Users/ayush/Desktop/manga-task-byte/artifacts/models/comictextdetector.pt.onnx",
+  "model_sha256": "1a86ace74961413cbd650002e7bb4dcec4980ffa21b2f19b86933372071d718f",
+  "inference": {
+    "detector": "dmMaze/comic-text-detector ONNX via OpenCV DNN CPU",
+    "region_map_threshold": 0.3,
+    "minimum_region_score": 0.6,
+    "duplicate_overlap_threshold": 0.75,
+    "tesseract_language": "eng",
+    "tesseract_psm": 7,
+    "crop_upscale": 3,
+    "reading_order": "rtl_geometry",
+    "inference_reads_development_labels": false
+  },
+  "configurations": {
+    "raw_tesseract_rtl_baseline": {
+      "macro": {
+        "text_order_score": 0.3434612353863007,
+        "balanced_joint_f1": 0.1462160042128105,
+        "speaker_accuracy_on_matched": 0.7087848709297263,
+        "joint_f1": 0.2962539862829535,
+        "matched_token_coverage": 0.3521270339710515
+      },
+      "empty_pages": {
+        "gold_empty_pages": 1,
+        "correctly_empty_gold_pages": 0,
+        "false_positive_gold_empty_pages": 1
+      }
+    },
+    "comic_detector_onnx_tesseract": {
+      "macro": {
+        "text_order_score": 0.398061725644189,
+        "balanced_joint_f1": 0.09995863084781922,
+        "speaker_accuracy_on_matched": 0.607922475469651,
+        "joint_f1": 0.22417779497869747,
+        "matched_token_coverage": 0.3819912665109325
+      },
+      "empty_pages": {
+        "gold_empty_pages": 1,
+        "correctly_empty_gold_pages": 0,
+        "false_positive_gold_empty_pages": 1
+      }
+    }
+  }
+}
