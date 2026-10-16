@@ -197,3 +197,28 @@ transcription or speaker accuracy.
   Qwen/detector experiment reports.
 - No dataset, image files, virtual environment, local caches, or large model
   weights.
+
+## Optional local Streamlit demo
+
+The project includes a local browser interface for running OCR on manga sequences.
+
+The supplied dataset is not included in this repository. Restore the official dataset files at the project root before running the demo.
+
+Install the Python dependencies and ensure Tesseract OCR is installed on your computer. Then run:
+
+```sh
+python -m pip install -r requirements.txt
+python -m streamlit run demo_app.py --server.address 127.0.0.1
+
+## Optional local Streamlit demo
+
+The project includes a local browser interface for running OCR on manga sequences.
+
+The supplied dataset is not included in this repository. Restore the official dataset files at the project root before running the demo.
+
+Install the Python dependencies and ensure Tesseract OCR is installed on your computer. Then run:
+
+python -m pip install -r requirements.txt
+python -m streamlit run demo_app.py --server.address 127.0.0.1
+
+Open http://127.0.0.1:8501 in your browser. The demo runs locally and saves its outputs separately under artifacts/demo/; it does not replace the final submission.
